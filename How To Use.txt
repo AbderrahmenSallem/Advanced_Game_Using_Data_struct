@@ -1,0 +1,7 @@
+Load In Visual Code : open visual code, then proceed to file open Folder and Select either Pre or Post
+Make sure to have a c compiler
+in Terminal
+"gcc -o test test.c"
+"./test"
+
+The Main Launch File is test.c

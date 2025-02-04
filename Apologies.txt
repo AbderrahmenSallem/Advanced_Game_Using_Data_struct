@@ -1,0 +1,11 @@
+I Boasted that I would  make a program that includes Python and c (Interlop),
+yet I failed to attain my goal.
+I was able to Impliment my first interlop but the function was rather simple "an addition function"
+The moment I tried to do it using custom data types and pointers it got messy all of the sudden and I failed, thus stopped since it required a lot of research and a basic/solid understanding of the fundamentals which I do not have as of now .
+
+If Only I was able to make it to python, I would've used email/sql/csv/flask to make the game a webapp and have it store data in a data base
+instead of files .... 
+
+To sum it up : I am sorry for failing .
+
+Thank you for reading this far and Have a Great Day.

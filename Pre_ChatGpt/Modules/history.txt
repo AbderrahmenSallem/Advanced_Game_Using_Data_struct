@@ -1,0 +1,94 @@
+
+
+void fillPlayer(player *pl, char line[], char details[])
+{
+
+    int p = pos(line,'*');
+    substr(line,0,p);
+    pl->score[0] = atol(sub);
+    substr(line,p+1,-1);
+    strcpy(line,sub);
+    //printf("line is %s\n",line);
+    //printf("line is %s\n",details);
+    //
+    p = pos(line,'*');
+    substr(line,0,p);
+    pl->score[1] = atol(sub);
+    substr(line,p+1,-1);
+    strcpy(line,sub);
+    //
+    p = pos(line,'*');
+    substr(line,0,p);
+    pl->score[2]  = atol(sub);
+
+    p = pos(details,'*');
+    substr(details,0,p);
+    strcpy(pl->id,sub);
+    substr(details,p+1,-1);
+    strcpy(details,sub);
+    //
+    p = pos(details,'*');
+    substr(details,0,p);
+    strcpy(pl->name,sub);
+    pl->hash = customHash(pl->id);
+    //
+    /*printf("name is %s\n",pl->name);
+    printf("ID is %s\n",pl->id);
+    printf("SCORE[0] is %d\n",pl->score[0]);
+    printf("SCORE[1] is %d\n",pl->score[1]);
+    printf("SCORE[2] is %d\n",pl->score[2]);*/
+}
+int loadPlayer(root *tree)
+{
+    FILE *file = fopen("./Modules/stats/players.txt","r");
+    if(file == NULL)
+    {
+        printf("failed to open players file");
+        return 1;
+    }
+    int n = 0;
+    char line[UserMax];
+    while(fgets(line,sizeof(line),file) != NULL)
+    {
+        n = n +1;
+    }
+    rewind(file);
+    int i = 0;
+    player *pl;
+    for(i = 0 ; i < n; i++)
+    {
+        fgets(line,sizeof(line),file);
+        int p = pos(line,'*');
+        substr(line,0,p);
+        char tmpchar[UserMax];
+        strcpy(tmpchar,"");
+        strcat(tmpchar,"./Modules/stats/");
+        strcat(tmpchar,sub);
+        strcat(tmpchar,".txt");
+        //printf("tmpchar is %s\n ",tmpchar);
+        FILE *personal = fopen(tmpchar, "r");
+        if (personal == NULL)
+        {
+            printf("failed to open personal file");
+            return -1;
+        }
+        fgets(tmpchar,sizeof(tmpchar),personal);
+        player *pp;
+        pp = malloc(sizeof(player));
+        fillPlayer(pp,tmpchar,line);
+        if(i == 0)
+        {
+            tree->p = pp;
+            pl = pp;
+        }else if (i < n-1)
+        {
+            pl->p = pp;
+            pl = pp;
+        }else
+        {
+            pl->p = pp;
+            pl = pp;
+            pp->p = NULL;
+        }
+    }
+}

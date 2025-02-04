@@ -1,0 +1,9 @@
+Make a Load function
+Will load the Tree when called
+Functions : {loadQuestions,LoadPlayers, LoadPlayers}
+
+Screens :
+1) Login/SignUp
+2) Menu : {play,check score, leaderboard(100 playerD)}
+
+updating score : {update file and reload(using function load()) || update tree and update file by the end} : it will require an optimization since I made it open a file to check if there it needs to update while I could've just checked the class I have loaded 

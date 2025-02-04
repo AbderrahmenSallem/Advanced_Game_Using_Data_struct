@@ -1,0 +1,27 @@
+PS : I didn't read the instructions given in the classroom, I saw them today for the first time,
+thus my inability make a code that satisfies the your request .
+
+
+. I poured all the prior knowledge of c that I had + what I learned in class in this code 
+(data structures/custom types/pointers/memeory managment/files)
+
+. I provided you with 2 copies : 
+
+	1st copy is the one That I coded till the very end 
+
+	2nd copy is the one that I sent over to chatGpt to provide me with the required commenting as well as to help me quickly prepare 
+					   the documentation .
+
+
+So After Checking the Classroom today I found out that you requested a competetion of type with preliminary rounds and official rounds.
+That can be easily achieved by adding such an option to the menu, and my code already will not allow you to advance after making a mistake
+,which is the logic behind the competetion algorithm
+also for the money logic I have a score counter that keeps the value updated all I have to do is add a money_gained variable to the game
+
+That's about it ig .
+
+PS : I focused on the coding aspect of the game not the visuals since I wanted to impliment everthing I know of .
+
+
+Made By : Abderrahmen Sallem
+Duration : 32 Hours 

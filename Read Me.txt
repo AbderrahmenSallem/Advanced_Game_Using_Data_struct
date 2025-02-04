@@ -1,5 +1,5 @@
 PS : I didn't read the instructions given in the classroom, I saw them today for the first time,
-thus my inability make a code that satisfies the your request .
+thus my inability make a code that satisfies your request .
 
 
 . I poured all the prior knowledge of c that I had + what I learned in class in this code 
